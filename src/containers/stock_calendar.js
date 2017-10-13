@@ -22,7 +22,6 @@ class StockCalendar extends Component {
     this.onChangeEnd = this.onChangeEnd.bind(this);
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
-    this.renderData = this.renderData.bind(this);
     this.formatDate = this.formatDate.bind(this);
   }
 
@@ -31,13 +30,13 @@ class StockCalendar extends Component {
   }
 
   onChangeStart = (date) => {
-    let formatted = this.formatDate(date);
+    // let formatted = this.formatDate(date);
     this.setState({ start: this.formatDate(date)});
     console.log(this.state.start)
   }
 
   onChangeEnd = (date) => {
-    let formatted = this.formatDate(date);
+    // let formatted = this.formatDate(date);
     this.setState({ end: this.formatDate(date)});
     this.setState({ buttonDisabled: !this.state.buttonDisabled})
     console.log(this.state.end)
@@ -54,10 +53,6 @@ class StockCalendar extends Component {
     this.setState({ symbol: '' });
   }
 
-  renderData() {
-    this.props.fetchSelectedData(this.state.symbol, this.state.start, this.state.end);
-  }
-
   render() {
     return (
       <div>
@@ -71,8 +66,8 @@ class StockCalendar extends Component {
           <p>End</p>
           <Calendar onChange={this.onChangeEnd}/>
           </div>
-        </div>
-                <form className="input-group" onSubmit={this.onFormSubmit}>
+      </div>
+      <form className="input-group" onSubmit={this.onFormSubmit}>
           <input
             className="form-control"
             placeholder="Enter a symbol"
@@ -83,7 +78,6 @@ class StockCalendar extends Component {
             <button
               disabled = {this.state.buttonDisabled}
               className="btn btn-secondary"
-              onClick={this.renderData}
               >
               Submit
             </button>

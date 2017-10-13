@@ -14,7 +14,6 @@ class StockList extends Component {
 
   renderStock(Symbol) {
     const name = Symbol.dataset.dataset_code;
-    const description = Symbol.dataset.name;
     const date = Symbol.dataset.data.map(data => data[0])
     const open = Symbol.dataset.data.map(data => data[1])
     const high = Symbol.dataset.data.map(data => data[2])
