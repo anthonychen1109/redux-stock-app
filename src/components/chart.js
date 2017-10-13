@@ -6,7 +6,7 @@ export default (props) => {
   return (
     <div>
       <Sparklines height={100} width={140} data={props.data}>
-        <SparklinesLine style={{ stroke: "white", fill: "lightgrey", fillOpacity: ".1" }} color={props.color} />
+        <SparklinesLine style={{ stroke: "white", fill: "white", fillOpacity: ".1" }} color={props.color} />
       </Sparklines>
     </div>
   )

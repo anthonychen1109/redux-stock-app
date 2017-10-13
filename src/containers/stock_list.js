@@ -27,7 +27,7 @@ class StockList extends Component {
       <tr key={uniqueKey}>
         <td>{name}</td>
         <td><Chart data={open} color="green" /></td>
-        <td><Chart data={high} color="blue" /></td>
+        <td><Chart data={high} color="black" /></td>
         <td><Chart data={low} color="red" /></td>
         <td><Chart data={close} color="purple" /></td>
         <td><Chart data={volume} color="orange" /></td>

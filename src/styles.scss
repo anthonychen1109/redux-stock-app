@@ -1,4 +1,21 @@
 
+
+$background: "https://ak8.picdn.net/shutterstock/videos/21056473/thumb/1.jpg";
+
+@mixin cover-background {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body {
+  background-image: url($background);
+  background-repeat: no-repeat;
+  @include cover-background;
+}
+
 td, th {
   vertical-align: middle !important;
   text-align: center !important
@@ -28,4 +45,8 @@ svg {
 
 .search-bar-header {
   margin: auto;
+}
+
+.jumbotron {
+  opacity: .8;
 }
